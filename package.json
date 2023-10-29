@@ -1,0 +1,24 @@
+{
+  "name": "pass-key",
+  "version": "1.0.0",
+  "description": "This is a JavaScript library for generating random passwords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meryemisik/pass-key.git"
+  },
+  "keywords": [
+    "password",
+    "password generator",
+    "random password"
+  ],
+  "author": "Meryem I.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meryemisik/pass-key/issues"
+  },
+  "homepage": "https://meryemisik.github.io/pass-key/"
+}

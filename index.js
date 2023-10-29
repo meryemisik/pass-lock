@@ -156,6 +156,10 @@ const generator = {
       numbers: '0123456789',
       symbols: '!@#$%^&*()_+[]{}|;:,.<>?'
     };
+    
+    if (typeof options.symbols === 'string') {
+     characterSets.symbols = options.symbols
+    }
 
     if(options.length <1 || options.length === undefined){
       options.length = 8
@@ -165,21 +169,15 @@ const generator = {
     if (options.uppercase) allowedChars += characterSets.uppercase;
     if (options.lowercase) allowedChars += characterSets.lowercase;
     if (options.numbers) allowedChars += characterSets.numbers;
-    
-    if (options.symbols != true){ allowedChars += options.symbols }
-    else{ allowedChars += characterSets.symbols }
-
-
+    if (options.symbols) allowedChars += characterSets.symbols;
 
     if (!allowedChars) {
       allowedChars += characterSets.uppercase;
       allowedChars += characterSets.lowercase;
       allowedChars += characterSets.numbers;
       allowedChars += characterSets.symbols;
-
     }
 
-    console.log('sembol',characterSets.symbols )
 
     if (options && (options.quantity === 1 || options.quantity === undefined)) {
       return generatePassword(allowedChars, options.length, options.capitalize);

@@ -14,21 +14,27 @@
           Number Fonksiyonu
           <span class="red">(length, specificDigits, quantity)</span>
         </h4>
-<pre><code>const generator = require("pass-key")
+<pre><code>const generator = require("pass-lock")
     
-var password = generator.number({ length: 8}) 
+var password = generator.number() 
 
 <span class="red">result: 97461315</span></code></pre>
         <pre>
-const generator = require("pass-key")
+const generator = require("pass-lock")
     
-var password = generator.number({ length: 8, specificDigits: [4,7,8,9] })       
+var password = generator.number({ 
+  length: 8, 
+  specificDigits: [4,7,8,9] 
+})       
                 
 <span class="red">result:  87499894</span></pre>
         <pre>
-const generator = require("pass-key")
+const generator = require("pass-lock")
     
-var password = generator.number({ length: 8, quantity: 4 })       
+var password = generator.number({ 
+  length: 8, 
+  quantity: 4 
+})       
                 
 <span class="red">result:  [ '28678951', '92983693', '59229906', '63993702' ]</span></pre>
 
@@ -39,12 +45,12 @@ var password = generator.number({ length: 8, quantity: 4 })
             quantity)</span
           >
         </h4>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.memorable({ length: 8 })
+var password = generator.memorable()
             
-<span class="red">result: sheet-plunk-chaos-stony-balmy-annul-masse-woozy</span></code></pre>
-        <pre><code>const generator = require("pass-key")
+<span class="red">result: sheet-plunk-chaos-stony</span></code></pre>
+        <pre><code>const generator = require("pass-lock")
     
     const wordlist = [
         "apple",
@@ -63,7 +69,7 @@ var password = generator.memorable(
                     
 <span class="red">result:  cherry-banana-cherry-apple-elderberry-date</span></code></pre>
         <pre>
-<code>const generator = require("pass-key")
+<code>const generator = require("pass-lock")
     
     const wordlist = [
         "apple",
@@ -84,7 +90,7 @@ var password = generator.memorable(
                     
 <span class="red">result:  Date-Banana-Date-Date-Banana-Orange</span></code></pre>
         <pre>
-<code>const generator = require("pass-key")
+<code>const generator = require("pass-lock")
 
 var password = generator.memorable(
     { 
@@ -95,7 +101,7 @@ var password = generator.memorable(
 <span class="red">result: SCRAP-TODDY-OCTAL-ODDLY-CIVIC</span></code></pre>
 
         <pre>
-    <code>const generator = require("pass-key")
+    <code>const generator = require("pass-lock")
     
     var password = generator.memorable(
         { 
@@ -115,29 +121,47 @@ var password = generator.memorable(
             quantity)</span
           >
         </h4>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.password({ length: 5, uppercase: true })
+var password = generator.password({ 
+  length: 5, 
+  uppercase: true 
+})
             
 <span class="red">result: ELABPQIQWRXV</span></code></pre>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.password({ length: 12, lowercase: true, capitalize: true })
+var password = generator.password({ 
+  length: 12, 
+  lowercase: true, 
+  capitalize: true 
+})
                     
 <span class="red">result:  Etglxlkghsyu</span></code></pre>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.password({ length: 12, uppercase: true, numbers: true })
+var password = generator.password({ 
+  length: 12, 
+  uppercase: true, 
+  numbers: true })
                         
 <span class="red">result:  SPLFTW4A6OV5</span></code></pre>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.password({ length: 12, uppercase: true, numbers: true, symbol: true })
+var password = generator.password({ 
+  length: 12, 
+  uppercase: true, 
+  numbers: true, 
+  symbol: true 
+})
                         
 <span class="red">result:  2U6G+38?ACO}</span></code></pre>
-        <pre><code>const generator = require("pass-key")
+        <pre><code>const generator = require("pass-lock")
 
-var password = generator.password({ length: 6, quantity:4 })
+var password = generator.password({ 
+  length: 6, 
+  quantity:4 
+})
                         
 <span class="red">result:  [ 'eyULUU', 'RJpFdR', 'yUnYLV', 'dGqJqd' ]</span></code></pre>
       </div>

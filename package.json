@@ -1,5 +1,5 @@
 {
-  "name": "pass-key",
+  "name": "pass-lock",
   "version": "1.0.0",
   "description": "This is a JavaScript library for generating random passwords.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meryemisik/pass-key.git"
+    "url": "git+https://github.com/meryemisik/pass-lock.git"
   },
   "keywords": [
     "password",
@@ -18,7 +18,7 @@
   "author": "Meryem I.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meryemisik/pass-key/issues"
+    "url": "https://github.com/meryemisik/pass-lock/issues"
   },
-  "homepage": "https://meryemisik.github.io/pass-key/"
+  "homepage": "https://meryemisik.github.io/pass-lock/"
 }

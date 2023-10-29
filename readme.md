@@ -18,7 +18,7 @@ const generator = require("pass-key")
 
 var password = generator.password() 
 
-// password: !mR$d61O
+// result: !mR$d61O
 
 ```
 
@@ -29,7 +29,7 @@ const generator = require("pass-key")
 
 var password = generator.memorable()
 
-// password: churn-fable-urine-human
+// result: churn-fable-urine-human
 
 ```
 
@@ -40,7 +40,7 @@ const generator = require("pass-key")
 
 var password = generator.number() 
 
-// password: 48343074
+// result: 48343074
 
 ```
 
@@ -52,7 +52,7 @@ The following options can be passed to the options object for the number functio
 | Name              | Description                                           | Default Value |
 |-------------------|-------------------------------------------------------|---------------|
 | `length`          | An integer that specifies the password length.      | `8`           |
-| `specificDigits`  | An array of specific digits to include in the password. | `[]`        |
+| `specificDigits`  | An array of specific digits to include in the password. | `null`        |
 | `quantity`        | An integer that determines the number of passwords to generate. | `1` |
 
 ## Example
@@ -66,7 +66,7 @@ var password = generator.number({
     specificDigits:[4,7,8,2] 
   }) 
 
-// password: [ '42824882', '72484722', '28842287', '28478284' ]
+// result: [ '42824882', '72484722', '28842287', '28478284' ]
 ```
 ```javascript
 const generator = require("pass-key")
@@ -76,7 +76,7 @@ var password = generator.number({
     quantity: 5
   }) 
 
-// password: [ '558343', '694994', '405494', '665645', '557931' ]
+// result: [ '558343', '694994', '405494', '665645', '557931' ]
 ```
 <br><br> 
 ## Options For Memorable
@@ -86,7 +86,7 @@ The following options can be passed to the options object for the memorable func
 | Name              | Description                                           | Default Value |
 |-------------------|-------------------------------------------------------|---------------|
 | `length`          | An integer specifying the password length.            | `4`           |
-| `customWordList`  | A boolean to include a custom word list in the password. | `[]`        |
+| `customWordList`  | A boolean to include a custom word list in the password. | `null`        |
 | `uppercase`       | A boolean or a string to specify the inclusion of uppercase characters. | `false` |
 | `lowercase`       | A boolean to include lowercase characters in the password. | `true`      |
 | `capitalize`      | A boolean to start the password with a capital letter. | `false` |
@@ -103,7 +103,7 @@ var password = generator.memorable({
     uppercase: true 
   })    
 /*
-  password: [
+  result: [
               'NIGHT-VOTER-BEADY-MISER-WRYLY-CABAL',
               'CHOKE-CURRY-BLAME-ARSON-GRACE-SWORD',
               'GIANT-WAIVE-BUGGY-VAULT-FINCH-CRUSH',
@@ -126,7 +126,7 @@ var password = generator.memorable({
 })
 
 /*   
-  password: [
+  result: [
               'Butterfly-Tranquility-Freedom-Mountain',
               'Freedom-Mountain-Tranquility-Vibrant',
               'Tranquility-Sunshine-Butterfly-Mountain',
@@ -158,7 +158,7 @@ const generator = require("pass-key")
 
 var password = generator.password({length:10, numbers: true, symbols: true}) 
 
-// password: [|43%:2&7>
+// result: [|43%:2&7>
 
 ```
 
@@ -167,7 +167,7 @@ const generator = require("pass-key")
 
 var password = generator.password({length:10, numbers: true, symbols: true, quantity: 4, uppercase: true}) 
 
-// password: [ 'YD66]_SF;L', 'H$M>Z(+E!I', '(MI9R9>,[Z', 'PQ3;?)>C^^' ]
+// result: [ 'YD66]_SF;L', 'H$M>Z(+E!I', '(MI9R9>,[Z', 'PQ3;?)>C^^' ]
 ```
 
 ```javascript
@@ -175,7 +175,7 @@ const generator = require("pass-key")
 
 var password = generator.password({length:10, numbers: true, symbols: '^+%', quantity: 3})
 
-// password: [ '34625^2548', '%^8910%0+0', '7+675%%430' ]
+// result: [ '34625^2548', '%^8910%0+0', '7+675%%430' ]
 ```
 
 

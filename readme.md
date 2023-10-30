@@ -4,44 +4,45 @@ This is a JavaScript library for generating random passwords.
 
 ## Installation
 
-You can install this package using:
 ```bash
   npm i pass-lock
 ```
+
+## Import
+
+```javascript
+// ES6 Modules or TypeScript
+import generator from 'pass-lock'
+
+// CommanJS
+const generator = require("pass-lock")
+```
+
 
 
 
 ## Basic Usage For Create Password 
 
 ```javascript
-const generator = require("pass-lock")
-
 var password = generator.password() 
 
 // result: !mR$d61O
-
 ```
 
 ## Basic Usage For Create Memorable 
 
 ```javascript
-const generator = require("pass-lock")
-
 var password = generator.memorable()
 
 // result: churn-fable-urine-human
-
 ```
 
 ## Basic Usage For Create Number 
 
 ```javascript
-const generator = require("pass-lock")
-
 var password = generator.number() 
 
 // result: 48343074
-
 ```
 
 <br><br>
@@ -58,8 +59,6 @@ The following options can be passed to the options object for the number functio
 ## Example
 
 ```javascript
-const generator = require("pass-lock")
-    
 var password = generator.number({ 
     length: 8, 
     quantity: 4, 
@@ -69,8 +68,6 @@ var password = generator.number({
 // result: [ '42824882', '72484722', '28842287', '28478284' ]
 ```
 ```javascript
-const generator = require("pass-lock")
-    
 var password = generator.number({
     length: 6, 
     quantity: 5
@@ -95,8 +92,6 @@ The following options can be passed to the options object for the memorable func
 ## Example
 
 ```javascript
-const generator = require("pass-lock")
-
 var password = generator.memorable({ 
     length: 6, 
     quantity:4, 
@@ -113,8 +108,6 @@ var password = generator.memorable({
 ```
 
 ```javascript
-const generator = require("pass-lock")
-
 data = ['Sunshine', 'Mountain', 'Delicious', 'Butterfly', 'Adventure',
     'Serendipity', 'Harmony', 'Freedom', 'Vibrant', 'Tranquility']
 
@@ -154,8 +147,6 @@ The following options can be passed to the options object for the password funct
 ## Example
 
 ```javascript
-const generator = require("pass-lock") 
-
 var password = generator.password({
     length:10, 
     numbers: true, 
@@ -163,12 +154,9 @@ var password = generator.password({
   }) 
 
 // result: [|43%:2&7>
-
 ```
 
 ```javascript
-const generator = require("pass-lock") 
-
 var password = generator.password({
     length:10, 
     numbers: true, 
@@ -181,8 +169,6 @@ var password = generator.password({
 ```
 
 ```javascript
-const generator = require("pass-lock")    
-
 var password = generator.password({
     length:10, 
     numbers: true, 
